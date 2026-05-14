@@ -27,7 +27,7 @@ export default function HomePage() {
               Common presets
             </h2>
             <span className="text-xs uppercase tracking-wider text-text-muted">
-              click to load
+              click to copy &amp; load
             </span>
           </div>
           <PresetGrid />
