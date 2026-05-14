@@ -25,6 +25,7 @@ const config: Config = {
           DEFAULT: "#7c9cff",
           green: "#4ade80",
           blue: "#60a5fa",
+          yellow: "#facc15",
         },
       },
       fontFamily: {

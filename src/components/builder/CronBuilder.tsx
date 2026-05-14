@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { useCronStore } from "@/stores/cronStore";
 import { CronField } from "./CronField";
 import { FIELD_ORDER } from "@/lib/cron/fieldMeta";
@@ -18,7 +17,6 @@ export function CronBuilder() {
 
   useCronUrlSync();
 
-  // dot separator between fields (matches the screenshot)
   const sep = (
     <span aria-hidden className="text-text-dim text-xl select-none">
       ·
@@ -35,6 +33,8 @@ export function CronBuilder() {
       </div>
 
       <div className="rounded-xl border border-border-subtle bg-bg/40 p-5 md:p-6">
+        <HumanExplanation expression={expression} />
+
         <div className="flex flex-wrap items-end gap-3 md:gap-4 justify-center">
           {FIELD_ORDER.map((key, i) => (
             <div key={key} className="flex items-end gap-3 md:gap-4">
@@ -48,20 +48,18 @@ export function CronBuilder() {
               )}
             </div>
           ))}
-        </div>
 
-        <HumanExplanation expression={expression} />
+          <div className="pb-7 ml-2 md:ml-4">
+            <CopyButton
+              text={expression}
+              variant="premium"
+              size="lg"
+              label="Copy Cron"
+            />
+          </div>
+        </div>
 
         <SpecialCharsLegend />
-      </div>
-
-      <div className="mt-5 flex flex-wrap items-center gap-3 justify-between">
-        <div className="flex items-center gap-2">
-          <code className="px-3 py-1.5 rounded-md bg-bg-field border border-border font-mono text-sm text-text">
-            {expression}
-          </code>
-          <CopyButton text={expression} />
-        </div>
       </div>
 
       <div className="mt-6 grid md:grid-cols-2 gap-5">

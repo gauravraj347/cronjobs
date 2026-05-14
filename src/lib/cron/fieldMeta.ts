@@ -17,12 +17,12 @@ export const FIELD_ORDER: CronFieldName[] = [
 ];
 
 export const FIELD_META: Record<CronFieldName, FieldMeta> = {
-  minute: { key: "minute", label: "Minute", min: 0, max: 59 },
-  hour: { key: "hour", label: "Hour", min: 0, max: 23 },
-  dayOfMonth: { key: "dayOfMonth", label: "Day", min: 1, max: 31 },
+  minute: { key: "minute", label: "MIN", min: 0, max: 59 },
+  hour: { key: "hour", label: "HOUR", min: 0, max: 23 },
+  dayOfMonth: { key: "dayOfMonth", label: "DAY", min: 1, max: 31 },
   month: {
     key: "month",
-    label: "Month",
+    label: "MONTH",
     min: 1,
     max: 12,
     names: {
@@ -33,7 +33,7 @@ export const FIELD_META: Record<CronFieldName, FieldMeta> = {
   },
   dayOfWeek: {
     key: "dayOfWeek",
-    label: "Weekday",
+    label: "WEEKDAY",
     min: 0,
     max: 6,
     names: {
