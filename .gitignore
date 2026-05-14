@@ -1,0 +1,19 @@
+node_modules
+.next
+out
+dist
+.env*.local
+*.log
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+next-env.d.ts
+
+# build caches
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# local agent / tooling state
+.claude/

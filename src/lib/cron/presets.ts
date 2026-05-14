@@ -1,0 +1,148 @@
+import type { CronPreset } from "@/types/cron";
+
+export const PRESETS: CronPreset[] = [
+  {
+    slug: "every-minute",
+    name: "Every minute",
+    expression: "* * * * *",
+    description: "Runs once every minute, every day.",
+    category: "common",
+  },
+  {
+    slug: "every-5-minutes",
+    name: "Every 5 minutes",
+    expression: "*/5 * * * *",
+    description: "Runs every 5 minutes.",
+    category: "interval",
+  },
+  {
+    slug: "every-15-minutes",
+    name: "Every 15 minutes",
+    expression: "*/15 * * * *",
+    description: "Runs every 15 minutes.",
+    category: "interval",
+  },
+  {
+    slug: "every-30-minutes",
+    name: "Every 30 minutes",
+    expression: "*/30 * * * *",
+    description: "Runs every half hour.",
+    category: "interval",
+  },
+  {
+    slug: "hourly",
+    name: "Every hour",
+    expression: "0 * * * *",
+    description: "Runs at the top of every hour.",
+    category: "common",
+  },
+  {
+    slug: "every-2-hours",
+    name: "Every 2 hours",
+    expression: "0 */2 * * *",
+    description: "Runs every other hour, on the hour.",
+    category: "interval",
+  },
+  {
+    slug: "every-6-hours",
+    name: "Every 6 hours",
+    expression: "0 */6 * * *",
+    description: "Runs four times a day, every 6 hours.",
+    category: "interval",
+  },
+  {
+    slug: "daily-midnight",
+    name: "Daily at midnight",
+    expression: "0 0 * * *",
+    description: "Runs once a day at 12:00 AM.",
+    category: "common",
+  },
+  {
+    slug: "daily-9am",
+    name: "Daily at 9 AM",
+    expression: "0 9 * * *",
+    description: "Runs once a day at 9:00 AM.",
+    category: "time",
+  },
+  {
+    slug: "daily-noon",
+    name: "Daily at noon",
+    expression: "0 12 * * *",
+    description: "Runs once a day at 12:00 PM.",
+    category: "time",
+  },
+  {
+    slug: "weekday-9am",
+    name: "Every weekday at 9 AM",
+    expression: "0 9 * * 1-5",
+    description: "Runs at 9:00 AM Monday through Friday.",
+    category: "common",
+  },
+  {
+    slug: "every-5m-business-hours",
+    name: "Every 5 min during business hours",
+    expression: "*/5 9-17 * * 1-5",
+    description: "Runs every 5 minutes between 9 AM and 5 PM on weekdays.",
+    category: "advanced",
+  },
+  {
+    slug: "weekly-monday",
+    name: "Weekly on Monday",
+    expression: "0 9 * * 1",
+    description: "Runs every Monday at 9:00 AM.",
+    category: "common",
+  },
+  {
+    slug: "weekly-sunday",
+    name: "Weekly on Sunday",
+    expression: "0 0 * * 0",
+    description: "Runs every Sunday at midnight.",
+    category: "time",
+  },
+  {
+    slug: "weekends",
+    name: "Weekends only",
+    expression: "0 10 * * 6,0",
+    description: "Runs at 10:00 AM on Saturdays and Sundays.",
+    category: "advanced",
+  },
+  {
+    slug: "first-of-month",
+    name: "First day of month",
+    expression: "0 0 1 * *",
+    description: "Runs at midnight on the 1st of every month.",
+    category: "common",
+  },
+  {
+    slug: "15th-of-month",
+    name: "15th of every month",
+    expression: "0 9 15 * *",
+    description: "Runs at 9:00 AM on the 15th of every month.",
+    category: "time",
+  },
+  {
+    slug: "quarterly",
+    name: "Quarterly",
+    expression: "0 0 1 */3 *",
+    description: "Runs at midnight on the 1st day every 3 months.",
+    category: "advanced",
+  },
+  {
+    slug: "yearly",
+    name: "Once a year",
+    expression: "0 0 1 1 *",
+    description: "Runs at midnight on January 1st.",
+    category: "common",
+  },
+  {
+    slug: "twice-daily",
+    name: "Twice a day",
+    expression: "0 0,12 * * *",
+    description: "Runs at midnight and noon.",
+    category: "advanced",
+  },
+];
+
+export function findPresetByExpression(expr: string): CronPreset | undefined {
+  return PRESETS.find((p) => p.expression === expr.trim());
+}
