@@ -45,22 +45,6 @@ Open [http://localhost:3000](http://localhost:3000).
 - **cron-parser** — next-run calculation
 - **lucide-react** — icons
 
-## Project layout
-
-```
-src/
-├── app/                   Next.js routes (/, /presets)
-├── components/
-│   ├── builder/           CronBuilder, CronField, FieldEditor, QuickPicks
-│   ├── explainer/         HumanExplanation, NextRunsList, SpecialCharsLegend
-│   ├── presets/           PresetGrid
-│   ├── layout/            Header, Footer
-│   └── shared/            CopyButton
-├── lib/cron/              parse, stringify, explain, nextRuns, validate, presets, fieldMeta
-├── stores/                cronStore (Zustand)
-├── hooks/                 useCronUrlSync
-└── types/                 cron.ts
-```
 
 ## How it works
 
@@ -92,13 +76,3 @@ src/
 | `a,b` | list of values |
 | `L` | last (e.g. last day of month) |
 | `W` | nearest weekday |
-
-## Roadmap
-
-- [x] **Phase 1 — MVP**: builder, explainer, presets, URL sync
-- [ ] **Phase 2 — Growth**: learn pages, `/examples/[expr]` SEO pages, dynamic OG, embed widget
-- [ ] **Phase 3 — SaaS**: auth, saved expressions, public API, Stripe billing
-
-## License
-
-MIT
