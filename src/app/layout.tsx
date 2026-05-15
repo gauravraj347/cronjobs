@@ -30,6 +30,22 @@ export const metadata: Metadata = {
     description:
       "Visually build, validate, and understand cron expressions in real time.",
     type: "website",
+    images: [
+      {
+        url: "/api/og?cron=*%2F5+9+*+*+1-5&title=Build+cron+expressions+visually",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cron Expression Builder & Explainer",
+    description:
+      "Visually build, validate, and understand cron expressions in real time.",
+    images: [
+      "/api/og?cron=*%2F5+9+*+*+1-5&title=Build+cron+expressions+visually",
+    ],
   },
 };
 

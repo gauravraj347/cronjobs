@@ -1,5 +1,5 @@
 import { CronBuilder } from "@/components/builder/CronBuilder";
-import { PresetGrid } from "@/components/presets/PresetGrid";
+import { CollapsiblePresetSection } from "@/components/presets/CollapsiblePresetSection";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
@@ -30,7 +30,7 @@ export default function HomePage() {
               click to copy &amp; load
             </span>
           </div>
-          <PresetGrid />
+          <CollapsiblePresetSection initialCount={15} />
         </section>
       </main>
       <Footer />

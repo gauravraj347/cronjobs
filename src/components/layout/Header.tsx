@@ -25,14 +25,9 @@ export function Header() {
           <Link href="/presets" className="hover:text-text">
             Presets
           </Link>
-          <a
-            href="https://en.wikipedia.org/wiki/Cron"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-text"
-          >
-            About cron
-          </a>
+          <Link href="/learn" className="hover:text-text">
+            Learn
+          </Link>
         </nav>
       </div>
     </header>
