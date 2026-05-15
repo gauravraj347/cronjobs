@@ -15,14 +15,13 @@ export default function HomePage() {
     <>
       <Header />
       <main className="mx-auto max-w-6xl px-4 md:px-6 py-10 md:py-14">
-        <section className="mb-10 md:mb-12 text-center max-w-3xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-text">
+        <section className="mb-10 md:mb-12 text-center mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-text md:whitespace-nowrap">
             Cron Expression{" "}
             <span className="text-accent">Builder & Explainer</span>
           </h1>
-          <p className="mt-4 text-text-muted text-base md:text-lg">
-            Click any field below to edit it. The explanation, next run times,
-            and shareable URL update instantly.
+          <p className="mt-4 text-text-muted text-sm md:text-base lg:text-[17px] md:whitespace-nowrap">
+            Click any field below to edit it. The explanation, next run times, and shareable URL update instantly.
           </p>
         </section>
 
