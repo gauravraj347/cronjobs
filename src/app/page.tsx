@@ -1,7 +1,14 @@
+import { Suspense } from "react";
 import { CronBuilder } from "@/components/builder/CronBuilder";
 import { CollapsiblePresetSection } from "@/components/presets/CollapsiblePresetSection";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+
+function CronBuilderSkeleton() {
+  return (
+    <div className="w-full rounded-2xl border border-border bg-bg-panel/40 p-6 md:p-8 min-h-[480px]" />
+  );
+}
 
 export default function HomePage() {
   return (
@@ -19,7 +26,9 @@ export default function HomePage() {
           </p>
         </section>
 
-        <CronBuilder />
+        <Suspense fallback={<CronBuilderSkeleton />}>
+          <CronBuilder />
+        </Suspense>
 
         <section className="mt-14">
           <div className="flex items-baseline justify-between mb-5">
